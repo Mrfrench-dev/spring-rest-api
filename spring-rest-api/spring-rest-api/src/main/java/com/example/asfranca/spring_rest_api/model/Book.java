@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(name = "book") //Se for o mesmo do banco não precisa declarar igual aqui, somente ex
+@Table(name = "book") //It means that will turn into a database table
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -26,7 +26,7 @@ public class Book implements Serializable {
     private String author;
 
     @Column(name = "price", nullable = false, length = 8)
-    private Double price;
+    private double price;
 
     public Book() {
     }
@@ -47,11 +47,11 @@ public class Book implements Serializable {
         this.title = title;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

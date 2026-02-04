@@ -3,7 +3,10 @@ package com.example.asfranca.spring_rest_api.services;
 /*import br.com.mrfrench_dev.data.dto.v1.PersonDTO;
 import br.com.mrfrench_dev.data.dto.v2.PersonDTOv2;*/
 
+import com.example.asfranca.spring_rest_api.dto.BookRequestDTO;
+import com.example.asfranca.spring_rest_api.dto.BookResponseDTO;
 import com.example.asfranca.spring_rest_api.exception.ResourceNotFoundException;
+import com.example.asfranca.spring_rest_api.mapper.BookMapper;
 import com.example.asfranca.spring_rest_api.model.Book;
 import com.example.asfranca.spring_rest_api.repository.BookRepository;
 import org.slf4j.Logger;
@@ -25,71 +28,58 @@ public class BookServices {
 
     @Autowired
     BookRepository repository;
-/*
+
+    //04/02 implementado o MapStruct
     @Autowired
-    PersonMapper converter;*/
+    BookMapper mapper;
 
-    public Book Create(Book book) {
-        logger.info("Creating one person!");
-        return repository.save(book);
-/*
-      var entity = parseObject(person, Person.class);
+    public BookResponseDTO create(BookRequestDTO dto) {
+        logger.info("Creating one book!");
 
-        return parseObject(repository.save(entity),PersonDTO.class);*/
+        Book entity = mapper.toEntity(dto);
+        Book saved =  repository.save(entity);
+
+        return mapper.toResponseDTO(saved);
     }
 
-    //v2 create
-/*
-    public Bookv2 Createv2(Bookv2 bookv2) {
-        logger.info("Creating one book V2!");
 
-        var entity = converter.convertDTOToEntity(person);
-
-        return converter.convertEntityoToDTO(repository.save(entity));
-    }*/
     //Book Update, return the data with the new info
-    public Book Update(Book book) {
+    public BookResponseDTO Update(BookRequestDTO dto, Long id) {
         logger.info("Updating book!");
 
-        Book bookUpdated = repository.findById(book.getId())
+        Book bookUpdated = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found!"));
 
 
-        bookUpdated.setTitle(book.getTitle());
-        bookUpdated.setPublisher(book.getPublisher());
-        bookUpdated.setAuthor(book.getAuthor());
-        bookUpdated.setPrice(book.getPrice());
+        bookUpdated.setTitle(dto.getTitle());
+        bookUpdated.setPublisher(dto.getPublisher());
+        bookUpdated.setAuthor(dto.getAuthor());
+        bookUpdated.setPrice(dto.getPrice());
 
-        return repository.save(bookUpdated);
-       // return parseObject(repository.save(entity), PersonDTO.class);
+        return mapper.toResponseDTO(repository.save(bookUpdated));
 
     }
 
     public void Delete(Long id) {
         logger.info("Deleting person!");
 
-       Book book = repository.findById(id)
+        Book book = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Person not found!"));
 
         repository.delete(book);
     }
 
-    public Book findById(Long id) {
+    public BookResponseDTO findById(Long id) {
         logger.info("Finding one Book! ");
 
-        return repository.findById(id)
+        Book book =  repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("No Records found for this ID"));
-        /*
-        var entity = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("No Records found for this ID"));
-        return parseObject(entity, PersonDTO.class);*/
+        return mapper.toResponseDTO(book);
     }
 
-    public List<Book> findAll() {
+    public List<BookResponseDTO> findAll() {
         logger.info("Finding all Persons! ");
-        return repository.findAll();
-        //return parseListObjects(repository.findAll(),PersonDTO.class);
-
+        return mapper.toDtoList(repository.findAll());
     }
 
 

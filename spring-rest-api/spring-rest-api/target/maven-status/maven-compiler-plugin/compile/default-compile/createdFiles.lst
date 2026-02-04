@@ -1,1 +1,12 @@
+com\example\asfranca\spring_rest_api\mapper\BookMapper.class
 com\example\asfranca\spring_rest_api\Startup.class
+com\example\asfranca\spring_rest_api\repository\BookRepository.class
+com\example\asfranca\spring_rest_api\exception\handler\CustomEntityResponseHandler.class
+com\example\asfranca\spring_rest_api\services\BookServices.class
+com\example\asfranca\spring_rest_api\dto\BookRequestDTO.class
+com\example\asfranca\spring_rest_api\controller\BookController.class
+com\example\asfranca\spring_rest_api\mapper\BookMapperImpl.class
+com\example\asfranca\spring_rest_api\model\Book.class
+com\example\asfranca\spring_rest_api\exception\ExceptionResponse.class
+com\example\asfranca\spring_rest_api\exception\ResourceNotFoundException.class
+com\example\asfranca\spring_rest_api\dto\BookResponseDTO.class

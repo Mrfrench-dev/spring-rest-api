@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b9841f82-306f-4d3f-8a8b-b2c0ce706970" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/dto/BookRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/dto/BookResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spring-rest-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spring-rest-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/services/BookServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/java/com/example/asfranca/spring_rest_api/services/BookServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/src/test/java/com/example/asfranca/spring_rest_api/apptests/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/Startup.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/Startup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/exception/ExceptionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/exception/ExceptionResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/exception/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/exception/handler/CustomEntityResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/exception/handler/CustomEntityResponseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/repository/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/services/BookServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/classes/com/example/asfranca/spring_rest_api/services/BookServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/spring-rest-api-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/spring-rest-api-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/spring-rest-api-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/spring-rest-api-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/surefire-reports/TEST-com.example.asfranca.spring_rest_api.ApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-rest-api/spring-rest-api/target/surefire-reports/com.example.asfranca.spring_rest_api.ApplicationTests.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="39DRm5aKjW7bO1EjhvcM73wVTeZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Startup.executor": "Run",
+    "Maven.spring-rest-api [install,--non-recursive].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Startup.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Startup" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="spring-rest-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.asfranca.spring_rest_api.Startup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.asfranca.spring_rest_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Startup" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9841f82-306f-4d3f-8a8b-b2c0ce706970" name="Changes" comment="" />
+      <created>1770228813670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770228813670</updated>
+    </task>
+    <servers />
+  </component>
+</project>

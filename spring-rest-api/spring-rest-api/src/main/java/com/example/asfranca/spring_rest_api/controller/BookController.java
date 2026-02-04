@@ -3,6 +3,9 @@ package com.example.asfranca.spring_rest_api.controller;
 /*import br.com.mrfrench_dev.data.dto.v1.PersonDTO;
 import br.com.mrfrench_dev.data.dto.v2.PersonDTOv2;
 import br.com.mrfrench_dev.services.PersonServices;*/
+
+import com.example.asfranca.spring_rest_api.dto.BookRequestDTO;
+import com.example.asfranca.spring_rest_api.dto.BookResponseDTO;
 import com.example.asfranca.spring_rest_api.model.Book;
 import com.example.asfranca.spring_rest_api.services.BookServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +26,8 @@ public class BookController {
     //Same as private PersonServices service = new PersonServices();
 
     //Create "version 1 in case of production other versions
-    @PostMapping(value ="/v1",
-                    consumes = {
+    @PostMapping(value = "/v1",
+            consumes = {
                     MediaType.APPLICATION_JSON_VALUE, //Value structure accepted/presented
                     MediaType.APPLICATION_XML_VALUE,
                     MediaType.APPLICATION_YAML_VALUE},
@@ -34,29 +37,10 @@ public class BookController {
                     MediaType.APPLICATION_YAML_VALUE}
     )
     //RequestBody collect the "body" data field on Postman
-    public Book create(@RequestBody Book book) {
+    public BookResponseDTO create(@RequestBody BookRequestDTO dto) {
 
-        return service.Create(book);
+        return service.create(dto);
     }
-
-    //Example of v2 creation
-    /*
-    @PostMapping(value = "/v2",
-            consumes = {
-                    MediaType.APPLICATION_JSON_VALUE,
-                    MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_YAML_VALUE},
-            produces = {
-                    MediaType.APPLICATION_JSON_VALUE,
-                    MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_YAML_VALUE}
-    )
-
-    public PersonDTOv2 create(@RequestBody PersonDTOv2 person) {
-
-        return service.Createv2(person);
-    }
-*/
 
     //Select all books
     @GetMapping(produces = {
@@ -64,7 +48,8 @@ public class BookController {
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE})
 
-    public List<Book> findAll() {
+    public List<BookResponseDTO> findAll() {
+
         return service.findAll();
     }
 
@@ -77,13 +62,14 @@ public class BookController {
                     MediaType.APPLICATION_YAML_VALUE}
     )
 
-    public Book findById(@PathVariable("id") Long id) {
+    public BookResponseDTO findById(@PathVariable("id") Long id) {
+
         return service.findById(id);
     }
 
 
     //Update
-    @PutMapping(
+    @PutMapping(value = "/{id}",
             consumes = {
                     MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE,
@@ -94,8 +80,11 @@ public class BookController {
                     MediaType.APPLICATION_YAML_VALUE}
     )
 
-    public Book update(@RequestBody Book book) {
-        return service.Update(book);
+    public BookResponseDTO update(
+            @RequestBody BookRequestDTO bookdto,
+            @PathVariable Long id) {
+
+        return service.Update(bookdto,id);
     }
 
     //Delete by id
