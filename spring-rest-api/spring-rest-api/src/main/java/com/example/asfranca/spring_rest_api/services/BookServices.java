@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service //Indicates a Service Class
 public class BookServices {
 
-    private final AtomicLong counter = new AtomicLong();
+
     private Logger logger = LoggerFactory.getLogger(BookServices.class.getName());
 
     @Autowired
