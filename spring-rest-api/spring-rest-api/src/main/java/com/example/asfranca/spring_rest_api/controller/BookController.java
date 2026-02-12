@@ -4,22 +4,24 @@ package com.example.asfranca.spring_rest_api.controller;
 import br.com.mrfrench_dev.data.dto.v2.PersonDTOv2;
 import br.com.mrfrench_dev.services.PersonServices;*/
 
+import com.example.asfranca.spring_rest_api.controller.docs.BookControllerDocs;
 import com.example.asfranca.spring_rest_api.dto.BookRequestDTO;
 import com.example.asfranca.spring_rest_api.dto.BookResponseDTO;
-import com.example.asfranca.spring_rest_api.model.Book;
 import com.example.asfranca.spring_rest_api.services.BookServices;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 //Indicates a RESTful controller Http > Json,Xml etc
 @RestController
 @RequestMapping("/api/book") //User for to map HTTPRequests
-public class BookController {
+@Tag(name = "Books", description = "Endpoints for Managing Books")
+
+public class BookController implements BookControllerDocs {
 
     @Autowired //Inject dependencies
     private BookServices service;
@@ -36,7 +38,7 @@ public class BookController {
                     MediaType.APPLICATION_XML_VALUE,
                     MediaType.APPLICATION_YAML_VALUE}
     )
-    //RequestBody collect the "body" data field on Postman
+    @Override
     public BookResponseDTO create(@RequestBody BookRequestDTO dto) {
 
         return service.create(dto);
@@ -47,7 +49,7 @@ public class BookController {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE})
-
+    @Override
     public List<BookResponseDTO> findAll() {
 
         return service.findAll();
@@ -61,7 +63,7 @@ public class BookController {
                     MediaType.APPLICATION_XML_VALUE,
                     MediaType.APPLICATION_YAML_VALUE}
     )
-
+    @Override
     public BookResponseDTO findById(@PathVariable("id") Long id) {
 
         return service.findById(id);
@@ -79,21 +81,24 @@ public class BookController {
                     MediaType.APPLICATION_XML_VALUE,
                     MediaType.APPLICATION_YAML_VALUE}
     )
-
+    @Override
     public BookResponseDTO update(
-            @RequestBody BookRequestDTO bookdto,
-            @PathVariable Long id) {
+            @RequestBody BookRequestDTO bookdto, Long id) {
 
         return service.Update(bookdto,id);
     }
 
-    //Delete by id
+    @Override
     @DeleteMapping(value = "/{id}")
-
-    //Returns the correct code for Delete (204 No Content)
-    public ResponseEntity<?> Delete(@PathVariable("id") Long id) {
+    public ResponseEntity<Void> delete(@PathVariable("id")Long id) {
         service.Delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    //Delete by id
+
+
+
+
 
 }
