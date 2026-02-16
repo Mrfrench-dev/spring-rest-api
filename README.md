@@ -27,12 +27,12 @@ REST API desenvolvida com Spring Boot para gerenciamento de livros, aplicando bo
 - DTO
 - Migrations (Flyway)
 
-## 🔜 Próximos Passos
 - Implementação de DTO
 - Validações
 - Documentação com Swagger / OpenAPI
 - Segurança com Spring Security e JWT
 - Containerização com Docker
+- Deploy na Google Cloud Platform e AWS
 
 ## 👤 Autor
 Alex Silva França
